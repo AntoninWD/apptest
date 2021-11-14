@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-bcg: #fff;
+  --clr-bcg-second: hsl(0, 0%, 98%);
+  --clr-bcg-third: hsla(32, 100%, 69%, 0.157);
+  --btn-bcg: hsl(0, 0%, 92%);
+  --clr-font: hsl(207, 5%, 32%);
+  --clr-font-input: hsl(210, 7%, 40%);
+  --clr-font-second: hsl(0, 0%, 85%);
+  --clr-font-third: hsl(180, 1%, 83%);
+  --clr-primary: #e44e02;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  /* dark shades of primary color*/
+  --clr-primary-1: #e44e02;
+  --clr-primary-2: #ee6a05;
+  --clr-primary-3: #f58505;
+  --clr-primary-4: #fea406;
+  /* other to color  match with primary color */
+  --clr-secondary-1: #e23e2b;
+  --clr-secondary-2: #d42512;
+  --clr-secondary-3: #aa1622;
+  --clr-secondary-4: #770833;
+  --clr-secondary-5: #5b608f;
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(210, 22%, 24%);
+  --clr-grey-2: hsl(206, 7%, 27%);
+  --clr-grey-3: hsl(206, 7%, 37%);
+  --clr-grey-4: hsl(206, 7%, 47%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(206, 7%, 57%);
+  --clr-grey-6: hsl(206, 7%, 67%);
+  --clr-grey-7: hsl(206, 7%, 77%);
+  --clr-grey-8: hsl(206, 7%, 87%);
+  --clr-grey-9: hsl(206, 7%, 97%);
+  --clr-grey-10: hsl(206, 7%, 99%);
+  --clr-white: #fff;
+  --clr-black: #222;
+  /* status colors*/
+  --clr-active: #4fc56d;
+  --clr-busy: #e65050;
+  --clr-break: #ec761c;
+  --clr-offline: #7c7876;
+  /* other vars*/
+  --transition: all 0.2s ease;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --phone: 600px;
+  --tablet: 900px;
+  --max-width: 1200px;
+  --fixed-width: 620px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: white;
+  color: grey;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+
+select,
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid grey;
+  width: 90%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.25;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
 }

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { dataTrappes } from "./Data/data";
+import TopTraps from "./Components/TopTraps";
+import Traps from "./Components/Traps";
 
-function App() {
+const App = () => {
+  const [data, setData] = useState(dataTrappes.trappes);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <TopTraps data={data} />
+      <Traps data={data} />
+    </Wrapper>
   );
-}
-
+};
+const Wrapper = styled.div`
+  display: grid;
+  margin: 10rem;
+  border: 1px solid var(--clr-secondary-5);
+  box-shadow: var(--dark-shadow);
+  border-radius: 10px;
+`;
 export default App;
